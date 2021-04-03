@@ -11,8 +11,8 @@ import SwiftUI
 struct CombinePracticeApp: App {
     var body: some Scene {
         WindowGroup {
-            let doing = DoingSomething()
-            ContentView()
+            let viewModel = WeatherInfoViewModel()
+            WeatherInfoView(viewModel: viewModel)
         }
     }
 }

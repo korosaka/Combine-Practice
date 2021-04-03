@@ -9,57 +9,57 @@ import Foundation
 import Combine
 
 class DoingSomething {
-    
+    var anyCancellable: AnyCancellable?
     init() {
         
         //MARK: 1. Just
         
         //MARK: original
-//        let publisher = Just(100)
-//
-//        let subscriber = Subscribers.Sink<Int, Never>(receiveCompletion: { completion in
-//            switch completion {
-//            case .failure(let error):
-//                print("Error happened!", error.localizedDescription)
-//            case .finished:
-//                print("Finish!")
-//            }
-//        },
-//        receiveValue: { value in
-//            print("value :\(value)")
-//        })
-//
-//        publisher.subscribe(subscriber)
+        //        let publisher = Just(100)
+        //
+        //        let subscriber = Subscribers.Sink<Int, Never>(receiveCompletion: { completion in
+        //            switch completion {
+        //            case .failure(let error):
+        //                print("Error happened!", error.localizedDescription)
+        //            case .finished:
+        //                print("Finish!")
+        //            }
+        //        },
+        //        receiveValue: { value in
+        //            print("value :\(value)")
+        //        })
+        //
+        //        publisher.subscribe(subscriber)
         
         
         //MARK: shorten
-//        let cancelable1 = Just(999).sink(receiveCompletion: { completion in
-//            switch completion {
-//            case .failure(let error):
-//                print("Error happened!", error.localizedDescription)
-//            case .finished:
-//                print("Finish!")
-//            }
-//        },
-//        receiveValue: { value in
-//            print("value :\(value)")
-//        })
+        //                let cancelable1 = Just(999).sink(receiveCompletion: { completion in
+        //                    switch completion {
+        //                    case .failure(let error):
+        //                        print("Error happened!", error.localizedDescription)
+        //                    case .finished:
+        //                        print("Finish!")
+        //                    }
+        //                },
+        //                receiveValue: { value in
+        //                    print("value :\(value)")
+        //                })
         
         //MARK: shortest
-//        let cancelable2 = Just(777).sink(receiveValue: { value in
-//            print("value :\(value)")
-//        })
+        //        let cancelable2 = Just(777).sink(receiveValue: { value in
+        //            print("value :\(value)")
+        //        })
         
         //MARK: 2. assign & map
-//        let testResult = TestResult(score: "0")
-//
-//        let cancelable3 = Just(100)
-//            .map({ value in
-//                return String(value)
-//            })
-//            .assign(to: \.score, on: testResult)
-//
-//        print("test score: \(testResult.score)")
+        //        let testResult = TestResult(score: "0")
+        //
+        //        let cancelable3 = Just(100)
+        //            .map({ value in
+        //                return String(value)
+        //            })
+        //            .assign(to: \.score, on: testResult)
+        //
+        //        print("test score: \(testResult.score)")
         
         
         //MARK: 3. Notification Publisher
